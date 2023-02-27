@@ -1,0 +1,64 @@
+.Mapa {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 635px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(https://res.cloudinary.com/dp0abawuh/image/upload/v1677404778/CLASS_MAP_2_hqztxd.png);
+    background-size: 1000px 635px;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+
+.NotActive {
+    display: none;
+}
+
+.Active {
+    display: block;
+}
+
+h1 {
+    color: white;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 10px;
+    border: 2px solid white;
+    display: inline-block;
+}
+
+@media print {
+
+    .pagebreak {
+        page-break-before: always;
+    }
+
+    @page {
+        size: landscape;
+        orientation: landscape;
+    }
+
+    /* .Mapa {
+        height: 600px;
+        width: 1000px;
+        margin: 0px;
+    } */
+
+    .Mapa {
+        page-break-inside: avoid;
+        overflow: hidden;
+        scale: 0.9;
+        position: absolute;
+        top: 30%;
+        left: 45%;
+    }
+
+    .NoPrint {
+        display: none;
+    }
+}
